@@ -1,0 +1,19 @@
+name: GitHub Actions Demo
+on:
+push: 
+  branches : [main]
+pull_request: 
+  branches : [main]
+schedule:
+    - cron: '15 6 * * 0'
+workflow_dispatch:
+
+jobs :
+  Builds: 
+  runs-on : ubuntu@d6f4174f375ae9e9d8c3c5c6bfeea5566088faeb
+  steps : 
+    - run |
+  echo "Event name ${{github.event_name}}"
+ 
+
+   
